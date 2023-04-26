@@ -10,7 +10,7 @@ public class ReviewsServices {
 
     @Autowired
     ReviewsRepositories reviewRepositories;
-    public List<Reviews> getAllRatings() {
+    public List<Reviews> getAllReviews() {
         return reviewRepositories.findAll();
     }
     public Reviews getReviewsById(Integer id) {

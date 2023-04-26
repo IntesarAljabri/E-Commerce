@@ -18,7 +18,7 @@ public class ReviewsControllers {
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Reviews> getAllRatings() {
 
-        return (List<Reviews>) reviewService. getAllRatings();
+        return (List<Reviews>) reviewService. getAllReviews();
     }
 }
 
