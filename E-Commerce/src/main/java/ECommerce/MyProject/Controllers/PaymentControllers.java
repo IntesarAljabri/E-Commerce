@@ -6,9 +6,12 @@ import ECommerce.MyProject.Services.OrdersServices;
 import ECommerce.MyProject.Services.PaymentServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+@RestController
+@RequestMapping("Payment")
 public class PaymentControllers {
     @Autowired
     PaymentServices paymentServices;
