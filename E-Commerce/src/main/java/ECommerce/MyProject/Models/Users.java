@@ -1,9 +1,10 @@
 package ECommerce.MyProject.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import jakarta.persistence.criteria.Order;
+
+import java.util.List;
 
 public class Users {
 
@@ -15,4 +16,13 @@ public class Users {
 
     @Column(name = "customer_name")
     String name;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    List<Order> orders;
+
+    @OneToOne(mappedBy = "user")
+    @JsonIgnore
+    List<Shopping_Carts> shopping;
+
 }

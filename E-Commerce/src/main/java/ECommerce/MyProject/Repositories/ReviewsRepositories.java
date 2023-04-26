@@ -1,4 +1,8 @@
 package ECommerce.MyProject.Repositories;
 
-public interface ReviewsRepositories {
+import ECommerce.MyProject.Models.Payments;
+import ECommerce.MyProject.Models.Reviews;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReviewsRepositories extends JpaRepository<Reviews, Integer> {
 }

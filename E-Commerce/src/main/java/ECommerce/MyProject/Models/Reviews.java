@@ -1,10 +1,18 @@
 package ECommerce.MyProject.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.List;
+
+@Getter
+@Setter
+@Data
+@Entity
+@Table(name = "reviews")
 public class Reviews {
 
     @Id
@@ -19,5 +27,10 @@ public class Reviews {
 
     @Column(name = "review_type")
     String type;
+
+    @ManyToMany(mappedBy = "reviews")
+    @JsonIgnore
+    List<Product> product;
+
 
 }
