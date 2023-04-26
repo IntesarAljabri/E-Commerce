@@ -22,7 +22,7 @@ public class Shopping_Carts {
     @OneToMany(mappedBy = "Shopping_carts")
     @JsonIgnore
     List<Users> user;
-    
+
 
     @OneToMany(mappedBy = "Shopping_carts")
     @JsonIgnore
