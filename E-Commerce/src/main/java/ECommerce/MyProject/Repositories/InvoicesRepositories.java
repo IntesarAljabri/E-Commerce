@@ -1,4 +1,7 @@
 package ECommerce.MyProject.Repositories;
 
-public interface InvoicesRepositories {
+import ECommerce.MyProject.Models.Invoices;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InvoicesRepositories extends JpaRepository<Invoices, Integer> {
 }

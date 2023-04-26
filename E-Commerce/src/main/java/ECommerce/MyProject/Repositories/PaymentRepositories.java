@@ -1,4 +1,8 @@
 package ECommerce.MyProject.Repositories;
 
-public interface PaymentRepositories {
+import ECommerce.MyProject.Models.Orders;
+import ECommerce.MyProject.Models.Payments;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PaymentRepositories extends JpaRepository<Payments, Integer> {
 }
