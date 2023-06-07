@@ -17,7 +17,7 @@ public class ShoppingCartsControllers {
 
         @GetMapping("/getAll")
         public List<ShippingCarts> getAllShippingCarts() {
-            return shippingCartsServices.getAllShippings();
+            return shippingCartsServices.getAllShippingCarts();
         }
     }
 
